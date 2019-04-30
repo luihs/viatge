@@ -8,11 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'viatge';
 
-  public ngOnInit(){
-    $('#list-home a').on('click', function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
-  }
+ 
 
 }
