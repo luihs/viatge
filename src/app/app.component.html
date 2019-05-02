@@ -15,6 +15,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#" tabindex="-1">Configuracion</a>
       </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Notificaciones">
+        <a class="nav-link" href="#" tabindex="-1" >
+          <i class="material-icons">notifications_none</i>
+        </a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar un lugar" aria-label="Search">
@@ -33,7 +38,7 @@
           </div>
       </div>
       <div class="card">
-          <img src="../assets/images/angula.jpg" class="card-img-top rounded-lg"/>
+          <img src="../assets/images/angula.jpg" class="card-img-top"/>
       </div>
     </div>
     <div class="list-group" id="list-tab" role="tablist">
@@ -62,15 +67,15 @@
               <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   <div class="card-body">
-                    <h5 class="card-title">Yennifer</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"> @YenniferS</h6>
+                    <h5 class="card-title">Roxana</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@RoxanaR</h6>
                   </div>
                   <span class="badge badge-primary badge-pill">3</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   <div class="card-body">
-                    <h5 class="card-title">Roxana</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"> @RoxanaR</h6>
+                    <h5 class="card-title">Yennifer</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@YenniferS</h6>
                   </div>
                   <span class="badge badge-primary badge-pill">2</span>
                 </li>
@@ -106,44 +111,79 @@
       </div>
   </div>
   <div class="col-md-6">
-    <div class="card">
+    <div class="card border border-primary">
       <div class="card-body">
         <form>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">@luisr</label>
+            <label for="exampleFormControlTextarea1 text-muted">@luisr</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Postea..!"></textarea>
             <br />
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Left</button>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option selected>Selecciona tu estilo</option>
-                <option>Normal</option>
-                <option>Full imagen</option>
-                <option>Simple</option>
-              </select>
-          </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">        
+                    </div>
+              </div>
+              <div class="form-group col-md-6">
+                  <select class="form-control" id="exampleFormControlSelect1">
+                      <option selected>Selecciona tu estilo</option>
+                      <option>Normal</option>
+                      <option>Full imagen</option>
+                      <option>Simple</option>
+                    </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group col-md-10">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Subir</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Selecciona foto</label>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group col-md-2">
+                  <button type="button" class="btn btn-outline-success btn-lg">Listo</button>
+              </div>
+            </div>
           </div>
         </form>
       </div>
     </div>
   </div>
   <div class="col-md-3">
-    <div class="card">
-      <div class="card-body">
-
+    <div class="card border border-warning">
+      <div class="card-header text-muted">#Cerca</div>
+      <div class="card-body" data-spy="scroll" data-offset="0">
+        <div class="card mb-3">
+          <img src="../assets/images/cerca1.jpg" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Corazón Contento</h5>
+            <p class="card-text">3x2 en plato tradicional</p>
+            <p class="card-text"><small class="text-muted">Hace 3 minutos</small></p>
+          </div>
+        </div>
       </div>
     </div>
     <br/>
     <div class="card">
-      <div class="card-body">
+      <div class="card-header text-muted">#Anuncios</div>
+      <div class="card-body border border-success">
+        
       </div>
     </div>
   </div>
 </div>
 <script type="text/javascript">
-    $('#list-home a').on('click', function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+  $('body').scrollspy({ target: '#navbar-example' })
+})
 </script>
 <router-outlet></router-outlet>
