@@ -160,6 +160,7 @@
     <div class="card mb-3" >
       <div class="card-header">
           @luisr <span class="badge badge-pill badge-warning">Gold Traveler</span>
+         <!-- <span class="badge badge-pill badge-danger">Reportado</span> -->
       </div>
       <img src="../assets/images/publi1.JPG" class="card-img-top" style="width: 42rem">
       <div class="card-body">
@@ -167,10 +168,10 @@
           <p class="card-text">#loreto, Nueva aventura en el amazonas</p>
           <div class="btn-group">
               <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <i class="material-icons">favorite_border</i> <span class="badge badge-pill badge-info">200</span>
+                  <i class="material-icons" style="display: block">favorite_border</i> <span class="badge badge-pill badge-info">200</span>
               </button>
-              <button type="button" class="btn btn-outline-primary">Comentar</button>
-              <button type="button" class="btn btn-outline-danger">Reportar</button>
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Comentar</button>
+              <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target=".bd-report-modal-lg">Reportar</button>
           </div>
       </div>
       <div class="card-footer text-muted">
@@ -198,7 +199,7 @@
               <p class="card-text">Plaza de armas, desde Saqsayhuamán tienen que visitar este lugar</p>
               <div class="btn-group">
                   <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-                      <i class="material-icons">favorite_border</i> <span class="badge  badge-pill badge-info">200</span>
+                      <i class="material-icons" style="display: block">favorite_border</i> <span class="badge  badge-pill badge-info">1K</span>
                   </button>
                   <button type="button" class="btn btn-outline-primary">Comentar</button>
                   <button type="button" class="btn btn-outline-danger">Reportar</button>
@@ -228,7 +229,101 @@
     <div class="card">
       <div class="card-header text-muted">#Anuncios</div>
       <div class="card-body border border-success">
-        
+        <div class="card mb-3">
+          <img src="../assets/images/anuncio1.jpg" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Entredos <span class="badge  badge-pill badge-info">Nuevo</span></h5>
+            <p class="card-text">2x1 en pisco sour</p>
+            <p class="card-text"><small class="text-muted">Ahora</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Comentarios</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <h5 class="card-title">@lizS <span class="badge badge-pill badge-secondary">Silver Traveler</span> <span class="badge badge-pill badge-warning">Gold Assistant</span></h5>
+            <p>Que buena foto... tengo que ir si o si </p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <i class="material-icons" style="display: block">favorite_border</i> <span class="badge  badge-pill badge-info" style="display: inherit">2</span>
+              </button>
+              <button type="button" class="btn btn-outline-warning"><i class="material-icons" style="display: block">stars</i><span class="badge  badge-pill badge-info" style="display: inherit">10</span></button>
+              <button type="button" class="btn btn-outline-danger">Reportar</button>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h5 class="card-title">@RoxanaR <span class="badge badge-pill badge-info">Bronze Traveler</span></h5>
+            <p>Ya he estado en ese lugar y es hermoso, lo malo es que casi me ahogo xd</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <i class="material-icons" style="display: block">favorite_border</i> <span class="badge  badge-pill badge-info" style="display: inherit">10</span>
+              </button>
+              <button type="button" class="btn btn-outline-warning"><i class="material-icons" style="display: block">stars</i><span class="badge  badge-pill badge-info" style="display: inherit">3</span></button>
+              <button type="button" class="btn btn-outline-danger">Reportar</button>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h5 class="card-title">@AlexS <span class="badge badge-pill badge-light">New Menber</span></h5>
+            <p>Como llegó a ese lugar? ... lo quiero conocer :o</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <i class="material-icons" style="display: block">favorite_border</i> <span class="badge  badge-pill badge-info" style="display: inherit">0</span>
+              </button>
+              <button type="button" class="btn btn-outline-warning"><i class="material-icons" style="display: block">stars</i><span class="badge  badge-pill badge-info" style="display: inherit">0</span></button>
+              <button type="button" class="btn btn-outline-danger">Reportar</button>
+            </div>
+          </li>
+        </ul>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bd-report-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reportar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <h5>Porque consideras reportar a esta persona?</h5>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Foto Inadecuada</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Incluye lenguaje grosero</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+              <label class="form-check-label" for="inlineCheckbox3">Insulta a los usuarios</label>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Otro</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Indica otro motivo"></textarea>
+            </div>   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Reportar</button>
       </div>
     </div>
   </div>
