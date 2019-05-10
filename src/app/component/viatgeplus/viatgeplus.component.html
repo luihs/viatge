@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Corazón Contento</h5>
+          <h6 class="card-subtitle mb-2 text-muted">@CorazonC</h6>
+        </div>
+      </div>
+    </div>
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" routerLink="viatgeapp" role="tab" aria-controls="home">Tus Publicaciones</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Nuevo</a>
+      </div>
+  </div>
+  <div class="col-md-9">
+      <div class="card">  
+        <div class="card-body">
+              <h5 class="card-title">Registro</h5>
+              <form>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Titulo">
+                          <br />
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripcion"></textarea>
+                          <br />
+                          <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ubicacion">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tipo">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group col-md-10">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Subir</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Selecciona foto</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-group col-md-1">
+                          <button type="button" class="btn btn-outline-success btn-lg">Registrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+        </div>
+      </div>
+  </div>
+</div>
+<canvas id="line" class="chart chart-line" chart-data="data"
+chart-labels="labels" chart-series="series" chart-options="options"
+chart-dataset-override="datasetOverride" chart-click="onClick">
+</canvas>
